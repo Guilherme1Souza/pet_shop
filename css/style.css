@@ -1,0 +1,27 @@
+.container-custom {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+nav .btn-custom,
+footer .btn-custom {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+nav .btn-custom:hover 
+footer .btn-custom:hover {
+    background-color: #c82333;
+}
+nav .see-more
+footer .see-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
