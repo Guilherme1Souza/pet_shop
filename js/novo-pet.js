@@ -16,14 +16,7 @@ const saveBtnEl = document.getElementById("saveBtn");
 
 /* Atualiza a lista de cachorros cadastrados com o conteúdo do Local Storage */
 
-let localStorageContent = localStorage.getItem("pets");
-localStorageContent = JSON.parse(localStorageContent);
-
-let listaCachorros = [];
-
-if (localStorageContent) {
-	listaCachorros = [...localStorageContent];
-}
+let listaCachorros = buscarPets();
 
 /* Carregar lista das raças */
 const promisse = fetch(LISTA_RACAS_URL);
