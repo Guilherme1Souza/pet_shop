@@ -1,0 +1,78 @@
+.item-lista {
+    min-height: 235px;
+    max-width: 1225px;
+    overflow-y: hidden;
+}
+
+.imgCachorro {
+    max-height: 100%;
+    max-width: 288px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.editar {
+    background-color: #898989;
+    border: none;
+    width: 27px;
+    height: 25px;
+    border-radius: 4px; position: absolute;
+}
+
+.contato {
+    min-width: 249px;
+    border-left: 1px solid #E1E1E1;
+
+    &> h5 {
+        font-size: 24px;
+    }
+
+    &> div {
+        
+        &>  span {
+            font-size: 18px;
+        }
+    } 
+   
+}
+
+.conteudo-atributos {
+    width: 185px !important;
+}
+
+.btn-mensagem {
+gap: 10px;
+background: #7CBC64;
+border-radius: 8px;
+padding: 10px 21px;
+
+}
+
+@media (max-width: 1430px) {
+    .item-lista {
+        flex-direction: column;
+    }
+
+    .imgCachorro {
+        
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .contato {
+        border-top: 1px solid #E1E1E1;
+        border-left: none;
+        width: 100%;
+    }
+
+    .container-atributos { 
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .atributos {
+        align-items: center;
+    }
+
+  }

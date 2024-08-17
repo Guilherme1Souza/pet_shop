@@ -1,0 +1,89 @@
+main{
+    gap: 26px;
+    padding: 122px;
+    
+}
+
+
+
+
+.card-atendimento {
+    width: 391px;
+    height: 776px;    
+    border-radius: 40px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.08));
+}
+
+h3 {
+    margin: 24px 0 0 31px;
+    font-size: 20px;
+}
+
+h4 {
+    margin: 15px 0 0 31px;
+    font-size: 14px; 
+}
+
+.tutor {
+    margin: 5px 0 0 31px;
+}
+
+.serviços {
+    font-size: 14px;
+    margin: 3px 0 0 31px;
+}
+
+.atributos{
+    
+    width: 100%;
+    padding: 0 33px 0 33px;
+    
+}
+
+.editar {
+    background-color: #898989;
+    border: none;
+    width: 27px;
+    height: 25px;
+    border-radius: 4px; position: absolute;
+    margin: 25px 31px 0 0;
+}
+
+.conteudo-atributos {
+    width: 155px;
+    height: 57px;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.06));
+
+    & > img {
+
+        padding: 10px;
+    }
+}
+
+.status {
+    color: #F3C212;
+    font-size: 15px;
+    margin: 20px 0 0 5px;
+
+}
+
+.circle {  
+    width: 10px;
+    height: 10px;
+    background-color: #F3C212;
+    margin: 20px 0 0 31px;
+}
+
+.btn-atendimento {
+    background-color: #CF2236;
+    margin: 0 31px 0 31px;
+}
+
+.text-atributos {
+    font-size: 13px;
+    margin-left: 7px;
+
+    &> p {
+        margin: 0;
+    }
+}
