@@ -2,6 +2,7 @@ const LISTA_RACAS_URL = "https://dog.ceo/api/breeds/list/all";
 
 /* Elementos da página de cadastro de cachorros*/
 
+const tituloPaginaEl = document.getElementById("tituloPagina");
 const nomeTutorEl = document.getElementById("nomeTutor");
 const telefoneTutorEl = document.getElementById("telefoneTutor");
 const alergiaEl = document.getElementById("alergia");
@@ -29,6 +30,10 @@ promisse
 			item.textContent = raca;
 			listaRacasEl.appendChild(item);
 		});
+		if (idPet) {
+			const petEditado = buscarPet(idPet);
+			listaRacasEl.value = petEditado.raca;
+		}
 	});
 
 /* Carregar imagem do cachorro selecionado */
@@ -42,11 +47,10 @@ listaRacasEl.addEventListener("change", () => {
 		.then((response2) => response2.json())
 		.then((processedResponse2) => {
 			imagemCachorroEl.src = processedResponse2.message;
-			console.log(processedResponse2.message);
 		});
 });
 
-saveBtnEl.addEventListener("click", () => {
+function salvarCachorro() {
 	const listaCahorros = {
 		nomeTutor: nomeTutorEl.value,
 		telefoneTutor: telefoneTutorEl.value,
@@ -62,7 +66,9 @@ saveBtnEl.addEventListener("click", () => {
 	salvarPet(listaCahorros);
 	limparCampos();
 	alert("Pet cadastrado com sucesso!");
-});
+}
+
+saveBtnEl.addEventListener("click", salvarCachorro);
 
 function limparCampos() {
 	nomeTutorEl.value = "";
@@ -75,4 +81,48 @@ function limparCampos() {
 	porteEl.value = "";
 	tipoPelagem.value = "";
 	observacaoEl.value = "";
+}
+
+/* Obter os parâmetros da query string */
+
+const idPet = obterValorParametroURL("idCachorro");
+
+/* Muda Dados da página conforme a query string recebida */
+
+if (idPet) {
+	tituloPaginaEl.textContent = "Edita Pet:";
+	const petEditado = buscarPet(idPet);
+	nomeTutorEl.value = petEditado.nomeTutor;
+	telefoneTutorEl.value = petEditado.telefoneTutor;
+	alergiaEl.value = petEditado.alergia;
+	nomeCachorroEl.value = petEditado.nomeCachorro;
+	//listaRacasEl.value = petEditado.raca;
+	imagemCachorroEl.src = petEditado.imagem;
+	idadeEl.value = petEditado.idade;
+	porteEl.value = petEditado.porte;
+	tipoPelagem.value = petEditado.tipoPelagem;
+	observacaoEl.value = petEditado.observacao;
+	saveBtnEl.textContent = "Salvar alterações ->";
+	saveBtnEl.removeEventListener("click", salvarCachorro);
+	saveBtnEl.addEventListener("click", atualizaCachorro);
+}
+
+function atualizaCachorro() {
+	const listaCahorros = {
+		nomeTutor: nomeTutorEl.value,
+		telefoneTutor: telefoneTutorEl.value,
+		alergia: alergiaEl.value,
+		nomeCachorro: nomeCachorroEl.value,
+		raca: listaRacasEl.value,
+		imagem: imagemCachorroEl.src,
+		idade: idadeEl.value,
+		porte: porteEl.value,
+		tipoPelagem: tipoPelagem.value,
+		observacao: observacaoEl.value,
+		id: idPet,
+	};
+	atualizarPet(listaCahorros);
+	limparCampos();
+	window.location.href = "./listapets.html";
+	alert("Pet atualizado com sucesso!");
 }

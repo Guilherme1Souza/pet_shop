@@ -19,7 +19,7 @@ if (listaPets) {
 
 				<div class="atributos d-flex flex-column p-4">
 					<div class="d-flex justify-content-end">
-						<button
+						<button onclick="editarCachorro('${pet.id}')"
 							class="editar d-flex justify-content-center align-items-center"
 						>
 							<img src="../assets/editar.svg" alt="Editar" />
