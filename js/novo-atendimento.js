@@ -69,10 +69,9 @@ function cadastrarNovoServico(servicosSelecionados, total) {
 		statusAtendimento: "Agendado",
 		valorServico: total,
 		fotoCachorro: buscarFotoPet(listaNomeCachorrosEl.value),
+		idCachorro: buscaIdPet(listaNomeCachorrosEl.value),
 	};
-
-	listaServicos.push(novoServico);
-	localStorage.setItem("atendimentos", JSON.stringify(listaServicos));
+	salvarAtendimento(novoServico);
 	limparCampos();
 }
 
@@ -90,4 +89,9 @@ function limparCampos() {
 function buscarFotoPet(nomeCachorro) {
 	const foto = listaCachorros.find((p) => p.nomeCachorro === nomeCachorro);
 	return foto.imagem;
+}
+
+function buscaIdPet(nomeCachorro) {
+	const idPet = listaCachorros.find((p) => p.nomeCachorro === nomeCachorro);
+	return idPet.id;
 }
