@@ -28,7 +28,7 @@ if (listaServicos) {
 				/>
 
 				<div class="d-flex justify-content-end editar-atendimento">
-					<button
+					<button onclick="editarServico('${servico.id}')"
 						class="editar d-flex justify-content-center align-items-center"
 					>
 						<img src="../assets/editar.svg" alt="Editar" />
@@ -124,6 +124,15 @@ if (listaServicos) {
         `;
 		servicosCadastradosEl.innerHTML = cards;
 	});
+}
+
+//Editar Cachorro para a pagina
+//mudar o caminho de acordo com a pagina de cadastro do serviço
+function editarServico(idServico) {
+	// Monta a URL com o parâmetro idServico
+	const url = `./novo-atendimento.html?idServico=${idServico}`;
+	// Redireciona para a URL construída
+	window.location.href = url;
 }
 
 /* Atualização do status de atendimento */

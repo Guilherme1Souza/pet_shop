@@ -1,5 +1,6 @@
 /* Elementos da página de cadastro de serviços*/
 
+const tituloPaginaEl = document.getElementById("tituloPagina");
 const listaNomeCachorrosEl = document.getElementById("listaNomeCachorros");
 const horarioEl = document.getElementById("horario");
 const responsavelEl = document.getElementById("responsavel");
@@ -22,11 +23,7 @@ Object.values(listaCachorros).forEach((cachorro) => {
 	listaNomeCachorrosEl.appendChild(item);
 });
 
-btnEl.addEventListener("click", () => {
-	const servicosSelecionados = capturaServicosSelecionados();
-	const total = calculaValorServicos(servicosSelecionados);
-	cadastrarNovoServico(servicosSelecionados, total);
-});
+btnEl.addEventListener("click", salvarServico);
 
 /* FUNÇÕES */
 
@@ -94,4 +91,10 @@ function buscarFotoPet(nomeCachorro) {
 function buscaIdPet(nomeCachorro) {
 	const idPet = listaCachorros.find((p) => p.nomeCachorro === nomeCachorro);
 	return idPet.id;
+}
+
+function salvarServico() {
+	const servicosSelecionados = capturaServicosSelecionados();
+	const total = calculaValorServicos(servicosSelecionados);
+	cadastrarNovoServico(servicosSelecionados, total);
 }
