@@ -96,7 +96,6 @@ if (idPet) {
 	telefoneTutorEl.value = petEditado.telefoneTutor;
 	alergiaEl.value = petEditado.alergia;
 	nomeCachorroEl.value = petEditado.nomeCachorro;
-	//listaRacasEl.value = petEditado.raca;
 	imagemCachorroEl.src = petEditado.imagem;
 	idadeEl.value = petEditado.idade;
 	porteEl.value = petEditado.porte;
