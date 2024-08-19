@@ -53,8 +53,8 @@ function calculaValorServicos(servicosSelecionados) {
 			total += 10.0;
 		}
 	}
-	totalEl.textContent = `Atendimento agendado com sucesso! - Total: R$ ${total},00`;
-	return total;
+	alert(`Atendimento agendado com sucesso! - Total: R$ ${total},00`);
+return total;
 }
 
 function cadastrarNovoServico(servicosSelecionados, total) {

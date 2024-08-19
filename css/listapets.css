@@ -2,6 +2,7 @@
     min-height: 235px;
     max-width: 1225px;
     overflow-y: hidden;
+    margin: 20px;
 }
 
 .imgCachorro {
@@ -16,7 +17,8 @@
     border: none;
     width: 27px;
     height: 25px;
-    border-radius: 4px; position: absolute;
+    border-radius: 4px; 
+    position: absolute;
 }
 
 .contato {
@@ -75,4 +77,39 @@ padding: 10px 21px;
         align-items: center;
     }
 
+  }
+
+  @media ( max-width: 1440px ) {
+    .editar {
+        background-color: #898989;
+        border: none;
+        display: flex;
+        margin: 0px 100px 0 0px;
+
+    }
+
+    .item-lista {
+        margin: 20px;
+    }
+  }
+
+  @media ( max-width: 480px ) {
+    .editar {
+        background-color: #898989;
+        border: none;
+        display: flex;
+        margin: 0px 100px 0 0px;
+
+    }
+
+    .imgCachorro {
+        max-height: 268PX;
+        max-width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .item-lista {
+        margin: 20px;
+    }
   }

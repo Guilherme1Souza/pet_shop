@@ -53,6 +53,7 @@ footer .see-more {
 }
 
 .form-select-custom {
+    font-size: 25px;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -60,6 +61,7 @@ footer .see-more {
     background: #FFF;
     width: 300px;
     height: 54px;
+    padding: 12px;
 }
 
 .forms-one-custom {
@@ -79,7 +81,7 @@ footer .see-more {
 .selecionar-horario {
     font-size: 24px;
     font-weight: 500;
-    margin: 10px 40px 0px 0px;
+    margin: 0px 40px 0px 0px;
 }
 
 .selecionar-horario-two {
@@ -106,7 +108,7 @@ footer .see-more {
 .selecionar-responsavel {
     font-size: 24px;
     font-weight: 500;
-    margin: 10px 65px 0px 0px;
+    margin: 0px 65px 0px 0px;
 }
 
 .forms-two-custom {
