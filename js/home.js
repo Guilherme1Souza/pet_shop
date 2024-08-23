@@ -19,17 +19,15 @@ if (listaServicos) {
 		}
 
 		cards += `
-        <div class="col-md-4">
-            <div class="dog-card">
-                <img src=${servico.fotoCachorro} alt="Foto do ${
-			servico.nomeCachorro
-		}">
-                <h5 class="mt-2">${servico.nomeCachorro}</h5>
-                <h6 class="mt-3">${servico.tipoServico.join(", ")}</h6>
+        <div class="" style="width: 233px">
+        <img src=${servico.fotoCachorro} alt="Foto do ${
+    servico.nomeCachorro
+}" style="width: 100%; height: 224px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            <div class="dog-card m-0">
+                <h5 class="">${servico.nomeCachorro}</h5>
+                <h6 class="">${servico.tipoServico.join(", ")}</h6>
                 <div class="status ${agendamento}">
-                    <span class="icon-wrapper">
-                        <i class="bi bi-circle-fill"></i>
-                    </span>
+                   <div class="circle rounded-circle" id="circle-1"></div>
                     ${servico.statusAtendimento} ${servico.horarioAtendimento}
                 </div>
             </div>

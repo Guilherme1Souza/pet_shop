@@ -12,8 +12,14 @@ body {
     padding: 50px 10%;
 }
 
-.nav-custom {
+p {
+    margin: 0;
+}
+
+nav {
     
+    padding: 0 !important;
+
     & > a{
         min-width: 289px;
     }
@@ -37,7 +43,12 @@ body {
     border-radius: 20px;
 }
 
-
+.circle {  
+    width: 10px;
+    height: 10px;
+    background-color: #F3C212;
+    
+}
 
 .primary-text-color {
     font-weight: 500;

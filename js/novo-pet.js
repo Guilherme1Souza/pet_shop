@@ -125,3 +125,26 @@ function atualizaCachorro() {
 	window.location.href = "./listapets.html";
 	alert("Pet atualizado com sucesso!");
 }
+
+function formatarTelefone(input) {
+    let telefone = input.value.replace(/\D/g, '');
+
+    if (telefone.length > 0) {
+        telefone = '(' + telefone;
+    }
+
+    if (telefone.length > 3) {
+        telefone = telefone.slice(0, 3) + ') ' + telefone.slice(3);
+    }
+
+    if (telefone.length > 10) {
+        telefone = telefone.slice(0, 10) + '-' + telefone.slice(10);
+    }
+
+    if (telefone.length > 15) {
+        telefone = telefone.slice(0, 15);
+    }
+
+
+    input.value = telefone;
+}

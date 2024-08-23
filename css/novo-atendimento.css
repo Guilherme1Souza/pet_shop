@@ -11,16 +11,23 @@ body {
     border-radius: 10px;
 }
 
-nav .btn-custom,
+hr {
+    color: #CAC4D0 !important;
+}
+
+a {
+    font-weight: 500 !important;
+}
+
 footer .btn-custom {
     background-color: #cf2236 !important;
     color: #fff !important;
     border: none;
     width: 100%;
-    height: 55px;
-    margin-bottom: 10px;
+    height: 56px;
     padding: 10px;
     font-size: 20px;
+    font-weight: 500;
 }
 
 .btn-custom:hover {
@@ -39,7 +46,8 @@ footer .see-more {
     font-family: 'Inter', sans-serif;
     font-size: 32px;
     font-weight: 500;
-    margin: 90px 0px 0px 130px;
+    margin: 114px 0 0 0;
+    
 }
 
 .container-two-custom {
@@ -49,25 +57,32 @@ footer .see-more {
 .selecionar-pet {
     font-size: 24px;
     font-weight: 500;
-    margin: 44px 130px 0px 0px;
+    
 }
 
 .form-select-custom {
-    font-size: 25px;
     display: flex;
-    flex-direction: column;
+    padding: 0 24px 0 24px;
     border-radius: 15px;
+    color: #4A4A4A;
+    font-size: 20px;
     border: 1px solid #E1E1E1;
     background: #FFF;
-    width: 300px;
+    width: 250px;
     height: 54px;
-    padding: 12px;
+    outline: none;
+
+}
+
+.form-select-custom, .selecionar-horario-two {
+    margin-top: 15px;
 }
 
 .forms-one-custom {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin-top: 44px;
+    justify-content: space-between;
+    height: auto;
 }
 
 .seleciona-time {
@@ -75,17 +90,15 @@ footer .see-more {
     text-align: center;
     align-items: center;
     font-weight: 500;
-    margin: 44px 0px 0px 0px;
 }
 
 .selecionar-horario {
     font-size: 24px;
     font-weight: 500;
-    margin: 0px 40px 0px 0px;
 }
 
 .selecionar-horario-two {
-    width: 300px;
+    width: 226px;
     height: 54px;
     border-radius: 15px;
     border: 1px solid #E1E1E1;
@@ -94,6 +107,8 @@ footer .see-more {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-align: center;
+    outline: none;
+    color: #4A4A4A;
 }
 
 .selecionar-horario-two::-webkit-inner-spin-button,
@@ -101,23 +116,19 @@ footer .see-more {
     padding: 20px;
 }
 
-.seleciona-nome-tutor {
-    margin: 44px 0px 0px 120px;
-}
-
 .selecionar-responsavel {
     font-size: 24px;
     font-weight: 500;
-    margin: 0px 65px 0px 0px;
 }
 
 .forms-two-custom {
-    margin: 68px 0 0 130px;
+    margin: 0;
 }
 
 .selecionar-servicos {
     display: flex;
     flex-direction: column;
+    margin-top: 68px;
 }
 
 .servicos {
@@ -125,13 +136,12 @@ footer .see-more {
     font-weight: 500;
 }
 
-/* Telas médias */
 @media (max-width: 884px) {
 
     nav .btn-custom,
     footer .btn-custom {
         font-size: 15px;
-        height: 65px;
+
         width: 120px;
     }
 
@@ -184,11 +194,10 @@ footer .see-more {
 
     label {
         justify-content: right;
-        width: 230px;
+        width: 180px;
     }
 }
 
-/* Telas pequenas */
 @media (max-width: 480px) {
 
     nav .btn-custom,
@@ -224,6 +233,6 @@ footer .see-more {
 
     label {
         justify-content: right;
-        width: 230px;
+        width: 180px;
     }
 }

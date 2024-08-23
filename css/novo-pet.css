@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-nav .btn-custom,
+
 .btn-custom {
 	background-color: #cf2236 !important; 
 	color: #fff!important;
@@ -17,4 +17,25 @@ nav .btn-custom,
 
 body {
 	background-color: #f6f8fa!important;
+}
+
+#tituloPagina {
+	font-size: 32px;
+	font-weight: 500;
+	margin-top: 64px;
+}
+
+.img-fluid {
+	border-radius: 30px;
+	width: 100%;
+	height: 295px !important;
+	
+}
+ 
+input { 
+	outline: none !important;
+}
+
+label {
+	color: #4A4A4A;
 }

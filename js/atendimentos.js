@@ -25,6 +25,7 @@ if (listaServicos) {
 				<img
 					src=${servico.fotoCachorro}
 					alt="Foto do ${servico.nomeCachorro}"
+					class="imgPet"
 				/>
 
 				<div class="d-flex justify-content-end editar-atendimento">
@@ -107,7 +108,7 @@ if (listaServicos) {
 				</p>
 
 				<div class="d-flex align-items-center">
-					<div class="circle rounded-circle" id="circle-1"></div>
+					<div class="circle rounded-circle" id="circle-1" style="margin: 20px 0 0 31px;"></div>
 					<p class="status" id="status-1">${servico.statusAtendimento} ${
 			servico.horarioAtendimento
 		}</p>
@@ -115,10 +116,8 @@ if (listaServicos) {
 
 				<button
 					class="primary-btn btn-atendimento text-white border-0 p-3 fw-medium rounded-4 mt-3"
-					onclick="mudarStatusAtendimento(1)"
-					id="btn-1"
 				>
-					Finalizar
+					Iniciar
 				</button>
 			</div>
         `;
@@ -137,37 +136,3 @@ function editarServico(idServico) {
 
 /* Atualização do status de atendimento */
 
-const status = document.querySelectorAll(".status");
-mudarCorStatus();
-
-function mudarStatusAtendimento(number) {
-	const status = document.getElementById(`status-${number}`);
-	const buttonAtendimento = document.getElementById(`btn-${number}`);
-
-	if (status.innerText.includes("Em atendimento")) {
-		status.innerText = "Concluído";
-	}
-	if (status.innerText.includes("Agendado")) {
-		status.innerText = "Em atendimento";
-	}
-
-	console.log(buttonAtendimento);
-
-	if (buttonAtendimento.innerText === "Iniciar") {
-		buttonAtendimento.innerText = "Finalizar";
-	}
-
-	mudarCorStatus();
-}
-
-function mudarCorStatus() {
-	for (i = 1; i <= status.length; i++) {
-		const corStatus = document.getElementById(`status-${i}`);
-		const circle = document.getElementById(`circle-${i}`);
-
-		if (corStatus.innerText.includes("Em atendimento")) {
-			corStatus.style.color = "#97D182";
-			circle.style.backgroundColor = "#97D182";
-		}
-	}
-}
